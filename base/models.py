@@ -25,3 +25,8 @@ class Projects(models.Model):
         except:
             url = ''
         return url
+    
+class Contact_us(models.Model):
+    name = models.CharField(max_length=200, null=True)
+    email = models.CharField(max_length=200, null=True)
+    message = models.TextField(null=True)

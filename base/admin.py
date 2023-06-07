@@ -13,3 +13,7 @@ admin.site.register(Skills, SkillsAdmin)
 class ProjectsAdmin(admin.ModelAdmin):
   list_display = ("project_title", "project_description", "project_link", "code_repo", "image",)
 admin.site.register(Projects, ProjectsAdmin)
+
+class Contact_usAdmin(admin.ModelAdmin):
+  list_display = ("name", "email", "message",)
+admin.site.register(Contact_us, Contact_usAdmin)

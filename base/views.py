@@ -19,5 +19,16 @@ def index(request):
     information = Information.objects.all()
     projects = Projects.objects.all()
     
+    if request.method == "POST":
+        contact = Contact_us()
+        name = request.POST.get('contact_name')
+        email = request.POST.get('contact_email')
+        message = request.POST.get('contact_message')
+        
+        contact.name = name
+        contact.email = email
+        contact.message = message
+        contact.save()
+    
     context = {'skills':skills, 'information':information, 'projects':projects}
     return render(request, 'base/index.html', context)

@@ -81,10 +81,7 @@
                 </li>
               </ul>
               <footer class="text-center text-white small">
-                <p class="mb--0 mb-2">Copyright 2020 Dream Pulse</p>
-                <p class="mb-0">Design:
-                  <a rel="nofollow" href="https://templatemo.com" class="tm-footer-link">Template Mo</a>
-                </p>
+                <p class="mb--0 mb-2">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <span>The Xepression</span></p>
               </footer>
             </div>
           </nav>
@@ -97,8 +94,9 @@
               <div class="tm-section-wrap">
                 <section id="intro" class="tm-section">
                     <div class="tm-bg-white-transparent tm-intro">
-                        <h2 class="tm-section-title mb-5 text-uppercase tm-color-primary-hd"><b>IGHO-IGGUE IRUESIRI</b></h2>
-                        <p class="tm-color-gray">
+                        <h2 class="tm-section-title mb-2 text-uppercase tm-color-primary-hd"><b>IGHO-IGGUE IRUESIRI</b></h2>
+                        <small>CEO, The Xepression</small>
+                        <p class="tm-color-gray" style="text-align: justify;">
                           {% for info in information %}
                             {{info.Summary}}
                           {% endfor %}
@@ -118,7 +116,7 @@
                     <div><i class="fas fa-6x fa-balance-scale mb-2 tm-section-icon"></i></div>                        
                     <h2 class="tm-section-title tm-color-primary mb-2">About Us</h2>
 
-                    <p class="mb-5">
+                    <p class="mb-2" style="text-align: justify;">
                       {% for info in information %}
                         {{info.about_us}}
                       {% endfor %}
@@ -130,7 +128,7 @@
               <div class="col-xl-6">
                 <div class="tm-section-half">
                     <div><i class="far fa-6x fa-building mb-2 tm-section-icon"></i></div>
-                    <h2 class="tm-section-title tm-color-primary mb-2">Skills</h2>
+                    <h2 class="tm-section-title tm-color-primary mb-2">Specialization</h2>
 
                     <ol>
                       {% for skill in skills %}
@@ -159,16 +157,16 @@
                                 <figure class="effect-bubba">
                                   <img src="{{project.imageURL}}" alt="Our Work Image" class="img-fluid">
                                   <figcaption>
-                                    <h2>{{project.project_title}}</h2>
+                                    <h2 style="word-wrap: break-word;">{{project.project_title}}</h2>
                                     <a href="{{project.imageURL}}">View more</a>
                                   </figcaption>
                                 </figure>
                               </div>
-                              <span>
-                                <h5>{{project.project_title}}</h5>
+                              <div style="border-style: dotted; border-color: grey; padding: 4px; word-wrap: break-word; border-radius: 10px;">
+                                <h5><b>{{project.project_title}}</b></h5>
                                 <p>{{project.project_description}}</p>
-                                <p>{{project.project_link}}</p>
-                              </span>
+                                <p><i>{{project.project_link}}</i></p>
+                              </div>
 
                             {% endfor %}
 
@@ -266,7 +264,10 @@
                 </div>
                 <div class="col-xl-6 mb-5">
                   <div class="tm-contact-form-wrap">
-                    <form action="" method="POST" class="tm-contact-form">
+                    <form method="POST" class="tm-contact-form">
+
+                        {% csrf_token %}
+                        
                         <div class="form-group">
                           <input type="text" id="contact_name" name="contact_name" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Name" required="" />
                         </div>
