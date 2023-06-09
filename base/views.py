@@ -29,6 +29,8 @@ def index(request):
         contact.email = email
         contact.message = message
         contact.save()
+        
+        return redirect('index')
     
     context = {'skills':skills, 'information':information, 'projects':projects}
     return render(request, 'base/index.html', context)

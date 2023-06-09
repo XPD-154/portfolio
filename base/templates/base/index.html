@@ -2,295 +2,706 @@
 {% load static %}
 {% block content %}
 
-  <body>
-    <main class="container-fluid">
-      <div class="row">        
-          <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
-            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="tm-sidebar-sticky">
-              <div class="tm-brand-box">
-                <div class="tm-double-border-1">
-                  <div class="tm-double-border-2">
-                    <img src="{% static 'img/igho.jpg' %}" width="225" height="250" alt="Profile_pic">
-                  </div>
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand"><img src="{% static 'img/logo.png' %}" style="width: 35px; height: 35px;"></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#service" class="nav-item nav-link">Service</a>
+                        <!--<a href="#experience" class="nav-item nav-link">Experience</a>-->
+                        <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                        <!--<a href="#price" class="nav-item nav-link">Price</a>-->
+                        <!--<a href="#review" class="nav-item nav-link">Review</a>-->
+                        <!--<a href="#team" class="nav-item nav-link">Team</a>-->
+                        <!--<a href="#blog" class="nav-item nav-link">Blog</a>-->
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
                 </div>
-              </div>
-
-              <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav">
-                <li class="nav-item">
-                  <a href="#intro" class="nav-link active">
-                    <span class="d-inline-block mr-3">Intro</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#about" class="nav-link">
-                    <span class="d-inline-block mr-3">About</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#work" class="nav-link">
-                    <span class="d-inline-block mr-3">Work</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-
-                <!--
-                <li class="nav-item">
-                  <a href="#clients" class="nav-link">
-                    <span class="d-inline-block mr-3">Clients</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-                -->
-
-                <li class="nav-item">
-                  <a href="#talk" class="nav-link">
-                    <span class="d-inline-block mr-3">Let's Talk</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav flex-row tm-social-links">
-                <li class="nav-item">
-                  <a href="https://facebook.com" class="nav-link tm-social-link">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://twitter.com" class="nav-link tm-social-link">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-
-                <!--
-                <li class="nav-item">
-                  <a href="https://dribbble.com" class="nav-link tm-social-link">
-                    <i class="fab fa-dribbble"></i>
-                  </a>
-                </li>
-                -->
-
-                <li class="nav-item">
-                  <a href="https://ng.linkedin.com/in/iruesiri-igho-iggue-a26621193" class="nav-link tm-social-link">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-              </ul>
-              <footer class="text-center text-white small">
-                <p class="mb--0 mb-2">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <span>The Xepression</span></p>
-              </footer>
             </div>
-          </nav>
-          
-          <main role="main" class="ml-sm-auto col-12">
-            <div
-              class="parallax-window"
-              data-parallax="scroll"
-              data-image-src="{% static 'img/dream-pulse-header.jpg' %}">
-              <div class="tm-section-wrap">
-                <section id="intro" class="tm-section">
-                    <div class="tm-bg-white-transparent tm-intro">
-                        <h2 class="tm-section-title mb-2 text-uppercase tm-color-primary-hd"><b>IGHO-IGGUE IRUESIRI</b></h2>
-                        <small>CEO, The Xepression</small>
-                        <p class="tm-color-gray" style="text-align: justify;">
-                          {% for info in information %}
-                            {{info.Summary}}
-                          {% endfor %}
-                        </p>
-                        <p class="mb-0 tm-color-gray">
-                          Dream Pulse is a Bootstrap 4.3.1 template designed for your websites. You can modify this layout as you like.
-                        </p>
-                    </div>              
-                </section>
-            </div>            
-          </div>
+        </div>
+        <!-- Nav Bar End -->
 
-          <div class="tm-section-wrap bg-white">
-            <section id="about" class="row tm-section">
-              <div class="col-xl-6">
-                <div class="tm-section-half">    
-                    <div><i class="fas fa-6x fa-balance-scale mb-2 tm-section-icon"></i></div>                        
-                    <h2 class="tm-section-title tm-color-primary mb-2">About Us</h2>
 
-                    <p class="mb-2" style="text-align: justify;">
-                      {% for info in information %}
-                        {{info.about_us}}
-                      {% endfor %}
-                    </p>
-
+        <!-- Hero Start -->
+        <div class="hero" id="home">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <p>I'm</p>
+                                <h1>Igho-Iggue Iruesiri</h1>
+                                <h2></h2>
+                                <div class="typed-text">Web Designer, Web Developer, Back End Developer, Graphic Designer, Data Analyst</div>
+                            </div>
+                            <div class="hero-btn">
+                                <a class="btn" href="#contact">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                        <div class="hero-image mb-2">
+                            <img src="{% static 'img/igho2.jpg' %}" style="border-radius: 20%;" alt="Hero Image">
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </div>
+        </div>
+        <!-- Hero End -->
 
-              <div class="col-xl-6">
-                <div class="tm-section-half">
-                    <div><i class="far fa-6x fa-building mb-2 tm-section-icon"></i></div>
-                    <h2 class="tm-section-title tm-color-primary mb-2">Specialization</h2>
 
-                    <ol>
-                      {% for skill in skills %}
-                        <li>{{skill.name}}</li>
-                      {% endfor %}
-                    </ol>
-                    
-                </div>
-              </div>
-            </section>
-          </div>
-            
-          <div class="tm-section-wrap bg-white">
-            <section id="work" class="row tm-section">
-              <div class="col-12">
-                <div class="w-100 tm-double-border-1 tm-border-gray">
-                    <div class="tm-double-border-2 tm-border-gray tm-box-pad">
-                      <div class="tm-gallery-wrap">
-                          <h2 class="tm-color-primary tm-section-title mb-4 ml-2">Our Work</h2>
-                          
-                          <div class="tm-gallery">
-
-                            {% for project in projects %}
-                            
-                              <div class="tm-gallery-item">                        
-                                <figure class="effect-bubba">
-                                  <img src="{{project.imageURL}}" alt="Our Work Image" class="img-fluid">
-                                  <figcaption>
-                                    <h2 style="word-wrap: break-word;">{{project.project_title}}</h2>
-                                    <a href="{{project.imageURL}}">View more</a>
-                                  </figcaption>
-                                </figure>
-                              </div>
-                              <div style="border-style: dotted; border-color: grey; padding: 4px; word-wrap: break-word; border-radius: 10px;">
-                                <h5><b>{{project.project_title}}</b></h5>
-                                <p>{{project.project_description}}</p>
-                                <p><i>{{project.project_link}}</i></p>
-                              </div>
-
-                            {% endfor %}
-
-                          </div>
-                          
-
-                      </div>                        
-                    </div>                  
-                  </div>     
-              </div>         
-            </section>
-          </div>
-           
-          <!--
-          <div class="tm-section-wrap bg-white">
-            <section id="clients" class="row tm-section">
-              <div class="col-12 tm-section-pad">
-                  <div class="tm-flex-item-left">
-                      <div class="tm-w-80">
-                          <h2 class="tm-color-primary tm-section-title mb-4">Our Clients</h2>
-                          <p class="mb-5">
-                            Aenean est augue, iaculis ut arcu a, cursus tempus eros.
-                            Maecenas ut efficitur lectus, vel commodo nibh. Vivamus
-                            consequat massa non euismod facilisis. Morbi assumsan non libero
-                            a vehicula. Donec blandit suscipit magna sit amet elementum.
-                          </p>
-                      </div>
-                      
-                      <div class="row tm-clients-images">
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                          <a href="https://google.com">
-                            <img src="img/client-1.png" alt="Client Image" class="img-fluid tm-client-img" />
-                          </a>                          
+        <!-- About Start -->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="{% static 'img/system.jpg' %}" alt="Image">
                         </div>
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                          <a href="https://facebook.com">
-                            <img src="img/client-2.png" alt="Client Image" class="img-fluid tm-client-img" />
-                          </a>                          
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                          <a href="https://twitter.com">
-                            <img src="img/client-3.png" alt="Client Image" class="img-fluid tm-client-img" />
-                          </a>                          
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                          <a href="https://instagram.com">
-                            <img src="img/client-4.png" alt="Client Image" class="img-fluid tm-client-img" />
-                          </a>                          
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                            <a href="https://google.com">
-                              <img src="img/client-5.png" alt="Client Image" class="img-fluid tm-client-img" />
-                            </a>                          
-                          </div>
-                          <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                            <a href="https://facebook.com">
-                              <img src="img/client-6.png" alt="Client Image" class="img-fluid tm-client-img" />
-                            </a>                          
-                          </div>
-                          <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                            <a href="https://twitter.com">
-                              <img src="img/client-7.png" alt="Client Image" class="img-fluid tm-client-img" />
-                            </a>                          
-                          </div>
-                          <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                            <a href="https://instagram.com">
-                              <img src="img/client-8.png" alt="Client Image" class="img-fluid tm-client-img" />
-                            </a>                          
-                          </div>
-                      </div>
-                  </div> 
-              </div>                             
-            </section>
-          </div>
-          -->
-            
-          <div class="tm-section-wrap bg-white">
-            <section id="talk" class="row tm-section">
-                <div class="col-xl-6 mb-5">
-                  <div class="tm-double-border-1 tm-border-gray">
-                    <div class="tm-double-border-2 tm-border-gray tm-box-pad">
-                        <h2 class="tm-color-primary tm-section-title mb-4">Talk to Us</h2>
-                        <p class="mb-4">
-                          {% for info in information %}
-                            {{info.contact_us}}
-                          {% endfor %}
-                        </p>
-                        <p class="mb-3">
-                          120-240 Orci varius natoque penatibus, <br>
-                          parturient montes, 10660 <br>
-                          nasvetur ridiculus mus
-                        </p>
-                    </div>                    
-                  </div>                  
-                </div>
-                <div class="col-xl-6 mb-5">
-                  <div class="tm-contact-form-wrap">
-                    <form method="POST" class="tm-contact-form">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-header text-left">
+                                <p>Learn About Me</p>
+                                <h2>4+ Years Experience</h2>
+                            </div>
+                            <div class="about-text">
+                                <p style="text-align: justify;">
+                                    {% for info in information %}
+                                        {{info.Summary}}
+                                    {% endfor %}
+                                </p>
+                            </div>
+                            <div class="skills">
 
-                        {% csrf_token %}
+                                {% for skill in skills %}
+                                <div class="skill-name">
+                                    <p>{{skill.name}}</p><p>{{skill.rating}}</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{skill.rating}}" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                {% endfor %}
                         
-                        <div class="form-group">
-                          <input type="text" id="contact_name" name="contact_name" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Name" required="" />
+                            </div>
+                            <!--<a class="btn" href="">Learn More</a>-->
                         </div>
-                        <div class="form-group">
-                          <input type="email" id="contact_email" name="contact_email" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Email" required="" />
-                        </div>
-                
-                        <div class="form-group">
-                          <textarea rows="4" id="contact_message" name="contact_message" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Message..." required=""></textarea>
-                        </div>
-                
-                        <div class="form-group mb-0">
-                          <button type="submit" class="btn rounded-0 d-block ml-auto tm-btn-primary">
-                            SEND
-                          </button>
-                        </div>
-                      </form>
-                  </div>                    
+                    </div>
                 </div>
-              </section>
-          </div>
-        </main>        
-      </div>
-    </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+        
+        <!-- Service Start -->
+        <div class="service" id="service">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>What I do</p>
+                    <h2>Awesome Quality Services</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-laptop"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Web Design</h3>
+                                <p>
+                                    Plan, conceptualize, and implement with me a design for your website in a way that is functional and offers a good user experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-laptop-code"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Web Development</h3>
+                                <p>
+                                    Create, build, and maintain websites with me. This includes aspects such as web design, web programming, and database management.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fab fa-usps"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Graphic Design</h3>
+                                <p>
+                                    Let me help you plan and project your ideas and experiences with visual and textual content in beautiful artistic fashion.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fab fa-buromobelexperte"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Data Analysis</h3>
+                                <p>
+                                    Let me help you examine data sets to find trends and draw conclusions about the information they contain.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+        
+        
+        <!-- Experience Start -->
+        <!--<div class="experience" id="experience">
+            <div class="container">
+                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Resume</p>
+                    <h2>Working Experience</h2>
+                </header>
+                <div class="timeline">
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                             <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Job Experience End -->
+        
+        
+        <!-- Banner Start -->
+        <div class="banner wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Reasonable Price</p>
+                    <h2>Get A <span>Special</span> Price</h2>
+                </div>
+                <div class="container banner-text">
+                    <p>
+                        You have the opportunity to discuss pricing and cost of any project, based on the nature, delivery time and size. 
+                    </p>
+                    <!--<a class="btn">Pricing Plan</a>-->
+                </div>
+            </div>
+        </div>
+        <!-- Banner End -->
 
-{% endblock %}  
+
+        <!-- Portfolio Start -->
+        <div class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Portfolio</p>
+                    <h2>My Excellent Portfolio</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="portfolio-filter">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-1">Web Design</li>
+                            <li data-filter=".filter-2">Graphic Design</li>
+                            <li data-filter=".filter-3">Data Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                <div class="row portfolio-container">
+
+                    {% for project in projects %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item {{project.project_type}} wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-img">
+                                <img src="{{project.imageURL}}" alt="Image">
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>{{project.project_title}}</h3>
+                                <a class="btn" href="{{project.imageURL}}" data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                        <div>
+                            <p style="text-align: center;"><i>{{project.project_link}}</i></p>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio End -->
+        
+        
+        <!-- Banner Start -->
+        <!--<div class="banner wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Awesome Discount</p>
+                    <h2>Get <span>30%</span> Discount</h2>
+                </div>
+                <div class="container banner-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                    </p>
+                    <a class="btn">Order Now</a>
+                </div>
+            </div>
+        </div>-->
+        <!-- Banner End -->
+        
+        
+        <!-- Price Start -->
+        <!--<div class="price" id="price">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Pricing Plan</p>
+                    <h2>Affordable Price</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="price-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Basic</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small>49<span>/ mo</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Bootstrap 4</li>
+                                        <li>Font Awesome 5</li>
+                                        <li>Responsive Design</li>
+                                        <li>Browser Compatibility</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="price-item featured-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Standard</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small>99<span>/ mo</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Bootstrap 4</li>
+                                        <li>Font Awesome 5</li>
+                                        <li>Responsive Design</li>
+                                        <li>Browser Compatibility</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="price-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Premium</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small>149<span>/ mo</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Bootstrap 4</li>
+                                        <li>Font Awesome 5</li>
+                                        <li>Responsive Design</li>
+                                        <li>Browser Compatibility</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Price End -->
+        
+        
+        <!-- Testimonial Start -->
+        <!--<div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
+            <div class="container">
+                <div class="testimonial-icon">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/testimonial-1.jpg" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+                            </p>
+                            <h3>Customer Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/testimonial-2.jpg" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+                            </p>
+                            <h3>Customer Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/testimonial-3.jpg" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+                            </p>
+                            <h3>Customer Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Testimonial End -->
+
+
+        <!-- Team Start -->
+        <!--<div class="team" id="team">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Team</p>
+                    <h2>Expert Team Members</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-1.jpg" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Mollie Ross</h2>
+                                <h4>Web Designer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-2.jpg" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Dylan Adams</h2>
+                                <h4>Web Developer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-3.jpg" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Jennifer Page</h2>
+                                <h4>Apps Designer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-4.jpg" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Josh Dunn</h2>
+                                <h4>Apps Developer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Team End -->
+        
+        
+        <!-- Contact Start -->
+        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8">
+                            <div class="contact-form">
+                                <p class="mb-4" style="color: white;">
+                                    {% for info in information %}
+                                      {{info.contact_us}}
+                                    {% endfor %}
+                                </p>
+                                <div id="success"></div>
+                                <form method="POST" >
+
+                                    {% csrf_token %}
+
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" id="name" name="contact_name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="email" class="form-control" id="email" name="contact_email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <!--<div class="control-group">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                        <p class="help-block"></p>
+                                    </div>-->
+                                    <div class="control-group">
+                                        <textarea class="form-control" id="message" name="contact_message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div>
+                                        <button class="btn" type="submit">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Blog Start -->
+        <!--<div class="blog" id="blog">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>From Blog</p>
+                    <h2>Latest Articles</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="blog-img">
+                                <img src="img/blog-1.jpg" alt="Blog">
+                            </div>
+                            <div class="blog-text">
+                                <h2>Lorem ipsum dolor sit amet</h2>
+                                <div class="blog-meta">
+                                    <p><i class="far fa-user"></i>Admin</p>
+                                    <p><i class="far fa-list-alt"></i>Web Design</p>
+                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                    <p><i class="far fa-comments"></i>5</p>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
+                                </p>
+                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="blog-img">
+                                <img src="img/blog-2.jpg" alt="Blog">
+                            </div>
+                            <div class="blog-text">
+                                <h2>Lorem ipsum dolor sit amet</h2>
+                                <div class="blog-meta">
+                                    <p><i class="far fa-user"></i>Admin</p>
+                                    <p><i class="far fa-list-alt"></i>Apps Design</p>
+                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                    <p><i class="far fa-comments"></i>10</p>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
+                                </p>
+                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Blog End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <img src="{% static 'img/logo.png' %}" style="width: 55px; height: 55px;" class="mb-3">
+                        <h2>Igho-Iggue Iruesiri</h2>
+                        <h3>Lagos State, Nigeria</h3>
+                        <div class="footer-menu">
+                            <p>+234 (0) 8037 6541 68</p>
+                        </div>
+                        <div class="footer-menu">
+                            <p>ighoiggueiruesiri@gmail.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://twitter.com/iruesiri154"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/XPD-154"><i class="fab fa-github"></i></a>
+                            <!--<a href=""><i class="fab fa-youtube"></i></a>-->
+                            <!--<a href=""><i class="fab fa-instagram"></i></a>-->
+                            <a href="https://ng.linkedin.com/in/iruesiri-igho-iggue-a26621193"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p class="mb--0 mb-2">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <span>I Xpression</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+{% endblock %}        
+       

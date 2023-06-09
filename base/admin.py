@@ -7,11 +7,11 @@ class InformationAdmin(admin.ModelAdmin):
 admin.site.register(Information, InformationAdmin)
 
 class SkillsAdmin(admin.ModelAdmin):
-  list_display = ("name",)
+  list_display = ("name", "rating",)
 admin.site.register(Skills, SkillsAdmin)
 
 class ProjectsAdmin(admin.ModelAdmin):
-  list_display = ("project_title", "project_description", "project_link", "code_repo", "image",)
+  list_display = ("project_title", "project_description", "project_link", "project_type", "code_repo", "image",)
 admin.site.register(Projects, ProjectsAdmin)
 
 class Contact_usAdmin(admin.ModelAdmin):
