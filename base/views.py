@@ -30,6 +30,8 @@ def index(request):
         contact.message = message
         contact.save()
         
+        messages.success(request, 'Message has been sent successfully.')
+        
         return redirect('index')
     
     context = {'skills':skills, 'information':information, 'projects':projects}
